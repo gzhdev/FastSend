@@ -19,6 +19,7 @@ export const useRecipientTransferStore = defineStore('recipientTransfer', () => 
   const { t } = useI18n()
   const localePath = useLocalePath()
   const toast = useToast()
+  const iceServers = getIceServers()
   const router = useRouter()
 
   const appStore = useAppStore()
@@ -247,7 +248,7 @@ export const useRecipientTransferStore = defineStore('recipientTransfer', () => 
 
   function initPDC() {
     status.value.isPeerConnecting = true
-    pdc = new PeerDataChannel({ iceServers: pubIceServers, initializeDataChannel: true })
+    pdc = new PeerDataChannel({ iceServers, initializeDataChannel: true })
     pdc.onSDP = (sdp) => ws?.send(JSON.stringify({ type: 'sdp', data: sdp }))
     pdc.onICECandidate = (candidate) =>
       ws?.send(JSON.stringify({ type: 'candidate', data: candidate }))

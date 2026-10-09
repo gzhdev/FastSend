@@ -56,6 +56,20 @@ export default defineNuxtConfig({
     enabled: false
   },
 
+  runtimeConfig: {
+    public: {
+      iceServers: []
+    }
+  },
+
+  icon: {
+    serverBundle: 'local',
+    clientBundle: {
+      scan: true
+    },
+    fallbackToApi: false
+  },
+
   primevue: {
     options: {
       unstyled: true,

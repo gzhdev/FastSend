@@ -1,11 +1,13 @@
-name: FastSend
+name: fastsend
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: fastsend:intranet
+    container_name: fastsend
+    restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     environment:
-      - NODE_ENV=production
-    command: node server/index.mjs
+      # 同一局域网直连无需配置；跨网段/NAT 时填入内网 STUN/TURN
+      NUXT_PUBLIC_ICE_SERVERS: '[]'
+    volumes:
+      - ./data:/data

@@ -2122,6 +2122,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-json/ic@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "@iconify-json/ic@npm:1.2.4"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/b0e4d01a1b259defb391412b263ac4adb80d7b87161a0aac1a14fa748ee6e805a855f3e5635d66beb896082d0a4ee160fb3365fdcc44f2cf54687e2585922fa4
+  languageName: node
+  linkType: hard
+
+"@iconify-json/icon-park-outline@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "@iconify-json/icon-park-outline@npm:1.2.4"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/64e221c99de626655dbd9b6f953b0ba7e266d8c4f8acab0a6944f415903e3dbc442adab4c25d65e3d50a941c7f643efe7c35f1d5e99c2bf83183c2bf2c8578da
+  languageName: node
+  linkType: hard
+
+"@iconify-json/material-symbols-light@npm:^1.2.95":
+  version: 1.2.95
+  resolution: "@iconify-json/material-symbols-light@npm:1.2.95"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/995ce264fc0b7dec9261126430c162584978cdf0e4d5ba867c1d1ea2768c13c7e8e2cf59a607a453179b1e75cd9047e19c56dc08364137fecb15788069ac2c67
+  languageName: node
+  linkType: hard
+
+"@iconify-json/material-symbols@npm:^1.2.94":
+  version: 1.2.94
+  resolution: "@iconify-json/material-symbols@npm:1.2.94"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/96558cb73d17db87b693e954cee884eeb80c1c85a682e768e2370a0466d4ec0993533fe650f60ddaeaaba978f3724a8bb83eb7476925416bcade9aaf80464fd1
+  languageName: node
+  linkType: hard
+
+"@iconify-json/solar@npm:^1.2.13":
+  version: 1.2.13
+  resolution: "@iconify-json/solar@npm:1.2.13"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/41f0b7cbe5b2ac4ed40228847bcf82a104a561deb383d947daba3ed87f6ae54bcf4baa7b247aba3ea46f70ca5a60dfa7b185506c543c42a03cd1146f6218effa
+  languageName: node
+  linkType: hard
+
 "@iconify/collections@npm:^1.0.641":
   version: 1.0.672
   resolution: "@iconify/collections@npm:1.0.672"
@@ -11898,6 +11943,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:."
   dependencies:
+    "@iconify-json/ic": "npm:^1.2.4"
+    "@iconify-json/icon-park-outline": "npm:^1.2.4"
+    "@iconify-json/material-symbols": "npm:^1.2.94"
+    "@iconify-json/material-symbols-light": "npm:^1.2.95"
+    "@iconify-json/solar": "npm:^1.2.13"
     "@isaacs/ttlcache": "npm:^2.1.4"
     "@nuxt/icon": "npm:^2.2.1"
     "@nuxtjs/color-mode": "npm:^4.0.0"

@@ -1,25 +1,29 @@
 # 构建阶段
-
 FROM node:24-alpine AS builder
 
 WORKDIR /app
 
 COPY package.json yarn.lock .yarnrc.yml ./
-RUN corepack enable && yarn install --frozen-lockfile
+RUN corepack enable && yarn install --immutable
 
 COPY . .
+ENV NODE_OPTIONS=--max-old-space-size=6144
 RUN yarn build
 
-# 生产阶段
+# 运行阶段
 FROM node:24-alpine
 
-WORKDIR /app
+ENV NODE_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=3000
 
-# 从构建阶段复制构建后的文件
 COPY --from=builder /app/.output /app
 
-# 暴露端口
+# 传输计数文件写在工作目录，单独挂卷保存
+RUN mkdir -p /data && chown node:node /data
+WORKDIR /data
+USER node
+
 EXPOSE 3000
 
-# 启动应用
-CMD ["node", "server/index.mjs"]
+CMD ["node", "/app/server/index.mjs"]
