@@ -42,8 +42,7 @@ export default defineI18nConfig(() => ({
         syncDir: 'Folder synchronization',
         selectDir: 'Select folder',
         toHome: 'Back to home',
-        terminate: 'Terminate',
-        buyMeCoffee: 'Buy me coffee'
+        terminate: 'Terminate'
       },
       hint: {
         noModernFileAPIWarn:
@@ -115,8 +114,7 @@ export default defineI18nConfig(() => ({
         syncDir: '目录同步',
         selectDir: '选择目录',
         toHome: '回首页',
-        terminate: '终止',
-        buyMeCoffee: '请我喝咖啡'
+        terminate: '终止'
       },
       hint: {
         noModernFileAPIWarn:
